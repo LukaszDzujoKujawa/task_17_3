@@ -1,9 +1,9 @@
-var express = require('express');
-var fs = require('fs');
-var bodyParser = require('body-parser');
+const express = require('express');
+const fs = require('fs');
+const bodyParser = require('body-parser');
 
-var app = express();
-var stringifyFile;
+const app = express();
+const stringifyFile;
 
 app.use(bodyParser.json());
 
@@ -36,9 +36,8 @@ app.post('/updateNote/:note', function(req, res) {
 });
 
 
-var server= app.listen(3000);
+const server = app.listen(3000);
 
 app.use(function(req, res, next){
 	res.status(404).send('Nie ma tego, czego szukasz')
 });
-
