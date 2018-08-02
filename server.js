@@ -3,7 +3,7 @@ const fs = require('fs');
 const bodyParser = require('body-parser');
 
 const app = express();
-const stringifyFile;
+let stringifyFile;
 
 app.use(bodyParser.json());
 
@@ -34,7 +34,6 @@ app.post('/updateNote/:note', function(req, res) {
 	});
 	res.send('test.json po dodaniu notatki: ' + stringifyFile);
 });
-
 
 const server = app.listen(3000);
 
